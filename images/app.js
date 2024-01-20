@@ -1,39 +1,34 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+require('dotenv').config(); // Load environment variables
 
 const app = express();
-const port = 3000; // Change this to your desired port
+const port = 3000;
 
-// Middleware to parse JSON and URL-encoded form data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Serve static files (assuming your HTML and CSS are in a 'public' folder)
 app.use(express.static('public'));
 
-// POST endpoint to handle form submission
 app.post('/submitForm', (req, res) => {
   const { name, email, message } = req.body;
 
-  // Replace the following with your email configuration
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'your-email@gmail.com',
-      pass: 'your-email-password'
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASSWORD
     }
   });
 
-  // Replace the following with your email settings
   const mailOptions = {
-    from: 'your-email@gmail.com',
-    to: 'blessingskelvinsaka@gmail.com', // Your email address
+    from: process.env.EMAIL_USER,
+    to: 'blessingskelvinsaka@gmail.com',
     subject: 'New Contact Form Submission',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
   };
 
-  // Send the email
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       return res.status(500).send(error.toString());
@@ -42,7 +37,6 @@ app.post('/submitForm', (req, res) => {
   });
 });
 
-// Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
