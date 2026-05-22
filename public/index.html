@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakas Portifolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9f72ec2bc7.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+
+    <p class="hero-subtitle">
+        Full Stack Developer • Flutter Developer • UI/UX Designer
+    </p>
+
+    <h1>
+        Hi, I'm <span>Kelvin</span> Saka
+    </h1>
+
+    <h2 class="hero-location">
+        Building modern web & mobile applications from Malawi
+    </h2>
+
+    <div class="hero-buttons">
+
+        <a href="#portfolio" class="btn">
+            View Projects
+        </a>
+
+        <a href="images/my-cv.pdf" download class="btn btn2">
+            Download CV
+        </a>
+
+    </div>
+
+    <div class="hero-socials">
+
+        <a href="#">
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a href="#">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+    </div>
+
+</div>
+        </div>
+    </div>
+    <!-- ------------about-------------------- -->
+    <div id="about">
+     <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+            <p>
+I am a passionate Computer Science and Education student from Malawi with skills in web development, Flutter app development, Node.js, MongoDB, and UI/UX design.
+
+I enjoy building modern websites and mobile applications that solve real-world problems. I have worked on projects such as the Nthanana Fitness App and an ESCOM fault detection system.
+
+I am always eager to learn new technologies and improve my development skills.
+</p>
+            
+            <div class="tab-tittles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links"  onclick="opentab('education')">Education</p>
+
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Frontend Development</span><br>HTML, CSS, JavaScript</li>
+
+                    <li><span>Backend Development</span><br>Node.js, Express.js, MongoDB</li>
+
+                            <li><span>Mobile App Development</span><br>Flutter & Firebase</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2024 - Current</span><br>Developing web and mobile applications using Flutter and Node.js</li>
+
+                        <li><span>2024</span><br>Built the Nthanana Fitness App</li>
+
+                        <li><span>2025</span><br>Working on ESCOM Electric Pole Fault Detection System</li>
+
+                                <li><span>2025</span><br>Developed portfolio and web projects</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2022 - Current</span><br>Bachelor's Degree in Education Computer Science</li>
+
+                        <li><span>DHIS2 Advanced Level Certificate</span><br>Online Certification</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+     </div>   
+    </div>
+
+    <div id="skills-section">
+
+    <div class="container">
+
+        <h1 class="sub-title">Technical Skills</h1>
+
+        <div class="skills-container">
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress html"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>CSS</span>
+                    <span>85%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress css"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>JavaScript</span>
+                    <span>80%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress javascript"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>Flutter</span>
+                    <span>75%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress flutter"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>Node.js</span>
+                    <span>70%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress node"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-----------------services---------------- --> 
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>It's important to note that the availability and accuracy of VRAM information may vary based on the graphics hardware and drivers.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>It's important to note that the availability and accuracy of VRAM information may vary based on the graphics hardware and drivers.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>It's important to note that the availability and accuracy of VRAM information may vary based on the graphics hardware and drivers.</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-----------------portfolio---------------- --> 
+<div id="portfolio">
+<div class="container">
+    <h1 class="sub-title">My Work</h1>
+
+    <div class="work-list">
+        <div class="work">
+
+    <img src="images/work-1.png" alt="">
+
+    <div class="layer">
+
+        <h3>Nthanana Fitness App</h3>
+
+        <p>
+            A Flutter-based fitness application designed for university students to perform home workouts, set reminders, and track progress.
+        </p>
+
+        <div class="project-tech">
+            Flutter • Firebase • UI/UX
+        </div>
+
+        <div class="project-links">
+
+            <a href="#">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+        <div class="work">
+
+    <img src="images/work-2.png" alt="">
+
+    <div class="layer">
+
+        <h3>ESCOM Fault Detection System</h3>
+
+        <p>
+            A smart electric pole fault detection system designed to identify and display power faults automatically using Node.js and MongoDB.
+        </p>
+
+        <div class="project-tech">
+            Node.js • MongoDB • Express
+        </div>
+
+        <div class="project-links">
+
+            <a href="#">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+        <div class="work">
+
+    <img src="images/work-3.png" alt="">
+
+    <div class="layer">
+
+        <h3>Personal Portfolio Website</h3>
+
+        <p>
+            A responsive modern portfolio website showcasing my skills, projects, and experience using HTML, CSS, JavaScript, and Node.js.
+        </p>
+
+        <div class="project-tech">
+            HTML • CSS • JavaScript • Node.js
+        </div>
+
+        <div class="project-links">
+
+            <a href="#">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+    </div>
+    <a href="#" class="btn">See more  </a>
+</div>
+</div>
+
+<!-----------------contact---------------- --> 
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                 <p> <i class="fa-solid fa-paper-plane"></i> blessingskelvinsaka@gmail.com</p>
+                 <p> <i class="fa-solid fa-square-phone"></i> 0995665650</p>
+                 <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square "></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                 </div>
+              <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+
+            </div>
+            <div class="contact-right"></div>
+           <form id="contact-form" action="/submitForm" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+                <p id="form-message"></p>
+            </form>
+
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Kelvin. Made with by <i class="fa-solid fa-heart"></i> Kensaka</p>
+    </div>
+</div>
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks ){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents ){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link")
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+
+const form = document.getElementById('contact-form');
+
+const message = document.getElementById('form-message');
+
+form.addEventListener('submit', async function(e){
+
+    e.preventDefault();
+
+    const submitButton = form.querySelector('button');
+
+    submitButton.innerText = 'Sending...';
+
+    submitButton.classList.add('loading');
+
+    const formData = new FormData(form);
+
+    try{
+
+        const response = await fetch('/submitForm',{
+
+            method: 'POST',
+
+            body: new URLSearchParams(formData)
+
+        });
+
+        if(response.ok){
+
+            message.innerText = 'Message sent successfully!';
+
+            message.style.opacity = '1';
+
+            form.reset();
+
+        }else{
+
+            message.innerText = 'Failed to send message.';
+
+            message.style.color = 'red';
+
+            message.style.opacity = '1';
+        }
+
+    }catch(error){
+
+        message.innerText = 'Something went wrong.';
+
+        message.style.color = 'red';
+
+        message.style.opacity = '1';
+
+    }
+
+    submitButton.innerText = 'Submit';
+
+    submitButton.classList.remove('loading');
+
+    setTimeout(() => {
+
+        message.style.opacity = '0';
+
+    }, 4000);
+
+});
+
+</script>
+</body>
+</html>

@@ -1,17 +1,17 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
-require('dotenv').config(); // Load environment variables
+require('dotenv').config();
 
 const app = express();
 const port = 3000;
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
 app.post('/submitForm', (req, res) => {
+
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
@@ -26,17 +26,32 @@ app.post('/submitForm', (req, res) => {
     from: process.env.EMAIL_USER,
     to: 'blessingskelvinsaka@gmail.com',
     subject: 'New Contact Form Submission',
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+    text: `Name: ${name}
+Email: ${email}
+Message: ${message}`
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
+
     if (error) {
-      return res.status(500).send(error.toString());
+      console.log(error);
+      return res.status(500).send('Error sending email');
     }
-    res.status(200).send('Email sent: ' + info.response);
+
+    res.status(200).send('Message sent successfully!');
+
   });
+
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.listen(port, async () => {
+
+  const url = `http://localhost:${port}`;
+
+  console.log(`Server running at ${url}`);
+
+  const open = (await import('open')).default;
+
+  open(url);
+
 });
